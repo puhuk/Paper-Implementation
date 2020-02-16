@@ -1,6 +1,6 @@
 # Paper-Implementation
 
-### VGG
+### VGG 
 ### AlexNet
 ### FCN
 ### SegNet
