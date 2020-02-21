@@ -2,7 +2,7 @@
 
 ### VGG 
 ### AlexNet
-### FCN
+### FCN 
 ### SegNet
 ### AutoEncoder
 ### YOLO
