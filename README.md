@@ -23,3 +23,6 @@ https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/ResNet>
 
 ### EAST 
 <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/EAST>
+
+### AutoEncoder
+<https://github.com/puhuk/Paper-Implementation/tree/master/Auto%20Encoder>
