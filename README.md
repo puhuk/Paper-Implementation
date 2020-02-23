@@ -4,14 +4,17 @@
 
   ### VGG 
   Paper : <https://arxiv.org/abs/1409.1556>
+  
   Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/VGG>
 
   ### AlexNet
   Paper : <http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks>
-  <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/Alex%20Net>
+  
+  Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/Alex%20Net>
 
   ### FCN 
   Paper : <https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf>
+  
   Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/FCN>
 
   ### SegNet (Ongoing)
@@ -22,18 +25,22 @@
 
   ### YOLO 
   Paper : <https://arxiv.org/abs/1506.02640>
+  
   Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/YOLO>
 
   ### GAN 
   Paper : <https://arxiv.org/abs/1406.2661>
+  
   Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/GAN>
 
   ### EAST (Ongoing)
   Paper : <https://arxiv.org/abs/1704.03155>
+  
   Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/EAST>
 
   ### AutoEncoder
   Paper : <http://proceedings.mlr.press/v27/baldi12a/baldi12a.pdf>
+  
   Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Auto%20Encoder>
 
 
