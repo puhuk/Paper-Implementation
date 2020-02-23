@@ -18,10 +18,14 @@
   Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/FCN>
 
   ### SegNet (Ongoing)
-  <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/SegNet>
+  Paper : <https://arxiv.org/pdf/1511.00561>
+  
+  Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/SegNet>
 
   ### ResNet 
-  <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/ResNet>
+  Paper : <https://arxiv.org/abs/1512.03385>
+  
+  Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/ResNet>
 
   ### YOLO 
   Paper : <https://arxiv.org/abs/1506.02640>
@@ -44,8 +48,11 @@
   Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Auto%20Encoder>
 
 
+### ====================================================================================================================
 
-## To Be Implemented
+
+# To Be Implemented
+
 
 ## Image
   ### UNet
