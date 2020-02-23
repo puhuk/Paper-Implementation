@@ -9,11 +9,11 @@
 ### FCN 
 <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/FCN>
 
-### SegNet 
+### SegNet (Ongoing)
 <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/SegNet>
 
-### ResNet <
-https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/ResNet>
+### ResNet 
+<https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/ResNet>
 
 ### YOLO 
 <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/YOLO>
@@ -21,7 +21,7 @@ https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/ResNet>
 ### GAN 
 <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/GAN>
 
-### EAST 
+### EAST (Ongoing)
 <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/EAST>
 
 ### AutoEncoder
