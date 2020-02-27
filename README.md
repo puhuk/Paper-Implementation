@@ -17,7 +17,7 @@
   
   Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/FCN>
 
-  ### SegNet (Ongoing)
+  ### SegNet
   Paper : <https://arxiv.org/pdf/1511.00561>
   
   Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/SegNet>
