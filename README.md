@@ -1,6 +1,8 @@
 # Paper-Implementation
 
+
 # Implemented
+
 
 ## Image 
 
@@ -58,8 +60,9 @@
   Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Recommendation/Deep%20AutoEncoders%20for%20Collaborative%20Filtering>
 
 
-# To Be Implemented
 
+
+# To Be Implemented
 
 ## Image
   ### UNet
