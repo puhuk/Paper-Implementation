@@ -16,7 +16,7 @@
   
   Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/Alex%20Net>
 
-  ### FCN 
+  ### FCN  
   Paper : <https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf>
   
   Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/FCN>
