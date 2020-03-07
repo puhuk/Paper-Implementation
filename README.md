@@ -107,7 +107,7 @@
   Paper : <https://arxiv.org/abs/1910.10683>
   
   
-## Recommendation System
+## Recommendation System 
   ### Item2Vec
   Paper : <https://arxiv.org/vc/arxiv/papers/1603/1603.04259v2.pdf>
   
