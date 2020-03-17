@@ -128,3 +128,6 @@
   
   ### Session-based Recommendation with Graph Neural Networks	
   Paper : <https://arxiv.org/pdf/1811.00855v4.pdf>
+  
+  ### Image-based Recommendations on Styles and Substitutes
+  Paper : <http://cseweb.ucsd.edu/~jmcauley/pdfs/sigir15.pdf>
