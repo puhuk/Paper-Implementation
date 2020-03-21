@@ -9,7 +9,7 @@
   ### VGG 
   Paper : <https://arxiv.org/abs/1409.1556> 
   
-  Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/VGG>
+  Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/VGG> 
 
   ### AlexNet
   Paper : <http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks>
