@@ -69,7 +69,7 @@
   Paper : <https://arxiv.org/abs/1505.04597>
   
   ### PSPNet
-  Paper : <https://arxiv.org/abs/1612.01105>
+  Paper : <https://arxiv.org/abs/1612.01105> 
   
   ### DeepLab
   Paper : <https://arxiv.org/abs/1606.00915>
