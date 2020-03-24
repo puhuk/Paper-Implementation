@@ -40,7 +40,7 @@
   Paper : <https://arxiv.org/abs/1406.2661>
   
   Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/GAN>
-
+ 
   ### EAST (Ongoing)
   Paper : <https://arxiv.org/abs/1704.03155>
   
