@@ -6,7 +6,7 @@
 
 ## Image 
 
-  ### VGG  
+  ### VGG 
   Paper : <https://arxiv.org/abs/1409.1556> 
   
   Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/VGG> 
