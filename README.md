@@ -6,7 +6,7 @@
 
 ## Image 
 
-  ### VGG 
+  ### VGG  
   Paper : <https://arxiv.org/abs/1409.1556>  
   
   Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/VGG> 
@@ -50,6 +50,11 @@
   Paper : <http://proceedings.mlr.press/v27/baldi12a/baldi12a.pdf>
   
   Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Auto%20Encoder>
+  
+  ### FOST
+  Paper : <https://arxiv.org/pdf/1801.01671.pdf>
+  
+  Implementation : TBD
 
 
 ## Recommendation System
