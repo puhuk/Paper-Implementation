@@ -18,7 +18,7 @@ class Dataset(torch.utils.data.Dataset):
         # Updated at Apr 5 2020
         self.to_tensor = ToTensor()
 
-        lst_data = os.listdir(self.data_dir)
+        lst_data = os.listdir(self.data_dir) 
         lst_data = [f for f in lst_data if f.endswith('jpg') | f.endswith('jpeg') | f.endswith('png')]
 
         # lst_label = [f for f in lst_data if f.startswith('label')]
