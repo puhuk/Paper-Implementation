@@ -11,7 +11,7 @@
   
   Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/VGG> 
 
-  ### AlexNet 
+  ### AlexNet  
   Paper : <http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks>
   
   Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/Alex%20Net>
