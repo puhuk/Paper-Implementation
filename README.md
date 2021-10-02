@@ -36,7 +36,7 @@
   
   Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/YOLO>
 
-  ### GAN 
+  ### GAN  
   Paper : <https://arxiv.org/abs/1406.2661>
   
   Implementation : <https://github.com/puhuk/Paper-Implementation/tree/master/Image_Network/GAN>
