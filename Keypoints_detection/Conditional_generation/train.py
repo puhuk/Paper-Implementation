@@ -12,7 +12,8 @@ from torchnet import meter
 from torchnet.logger import VisdomPlotLogger, VisdomSaver
 
 import dataset
-from model import landmark_detection_network
+from model import Encoder, psai_encoder, PoseEncoder, Decoder
+from loss import Perceptual_loss
 
 PARSER = argparse.ArgumentParser(description='Option for Conditional Image Generating')
 #------------------------------------------------------------------- data-option
@@ -63,16 +64,106 @@ PARSER.add_argument('--trained_model', type=str, default='',
 
 ARGS = PARSER.parse_args()
 
+def _create_render_sizes(max_size, min_size, renderer_stride):
+    render_sizes = []
+    size = max_size
+    while size >= min_size:
+        render_sizes.append(size)
+        size = max_size // renderer_stride
+        max_size = size
+    return render_sizes
+
+class train:
+
+    def __init__(self, opt):
+        self.n_filters = 32
+        self.n_maps=10
+        self.max_size =[128, 128]
+        self.min_size = [16, 16]
+        self.renderer_stride = 2
+        self.map_filters = n_filters*8 + n_maps
+        self.n_render_filters = 32
+        self.n_final_out=3
+
+        self.opt = opt
+        self.map_sizes=_create_render_sizes(self.max_size[0], self.min_size[0], self.renderer_stride)
+
+        self.psai_encoder = psai_encoder(in_channels=3, n_filters=32)
+        self.pi_encoder =  PoseEncoder(in_channels=3, n_filters=32, n_maps=10, map_sizes=self.map_sizes)
+        self.renderer = Decoder(self.min_size, self.map_filters, self.n_render_filters, self.n_final_out, n_final_res=self.max_size[0])
+        
+
+        
+
+
+    start_epoch = 1
+    best_result = 1
+    best_flag = False
+
+    if self.opt.resume_checkpoint:
+        print('Resuming checkpoint at {}'.format(self.opt.resume_checkpoint))
+        checkpoint = torch.load(
+            self.opt.resume_checkpoint,
+            map_location=lambda storage, loc: storage, pickle_module=pickle)
+
+        model_state = checkpoint['modelstate']
+        self.neuralnet.load_state_dict(model_state)
+
+        optim_state = checkpoint['optimstate']
+        self.optimizer = _make_optimizer(
+            self.opt, self.neuralnet, param_groups=optim_state['param_groups'])
+
+        start_epoch = checkpoint['epoch']+1
+        best_result = checkpoint['best_result']
+
+
 if __name__ == "__main__":
     print(ARGS)
 
-    model = landmark_detection_network(in_channels=3, n_filters=32)
+    n_filters = 32
+    n_maps=10
+    max_size =[128, 128]
+    min_size = [16, 16]
+    renderer_stride = 2
+    map_filters = n_filters*8 + n_maps
+    n_render_filters = 32
+    n_final_out=3
 
-    image = torch.randn([32, 3, 256, 256])
-    print(image.shape)
+    model = Encoder(in_channels=3, n_filters=32)
 
-    x = model(image)
-    print(len(x))
-    for item in x:
+    image = torch.randn([32, 3, 128, 128])
+    # print(image.shape)
+
+    # x = model(image)
+    # print(len(x))
+    # for item in x:
+    #     print(item.shape)
+
+    model1 = psai_encoder(in_channels=3, n_filters=32)
+
+    embeddings  = model1(image)
+    print(len(embeddings))
+    for item in embeddings:
         print(item.shape)
+
+    map_sizes=_create_render_sizes(max_size[0], min_size[0], renderer_stride)
+
+    model2 = PoseEncoder(in_channels=3, n_filters=32, n_maps=10, map_sizes=map_sizes)
+    gauss_pt, pose_embeddings = model2(image)
+    
+    print(len(gauss_pt), len(pose_embeddings))
+
+    renderer = Decoder(min_size, map_filters, n_render_filters, n_final_out, n_final_res=max_size[0])
+
+
+    print(embeddings[-1].shape, pose_embeddings[-1].shape)
+
+    joint = torch.cat((embeddings[-1], pose_embeddings[-1]), dim=1)
+    print(joint.shape)
+
+    pred = renderer(joint)
+    print(pred.shape)
+
+    print(renderer)
+
 
