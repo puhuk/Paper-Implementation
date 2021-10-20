@@ -64,7 +64,7 @@ class DatasetFromFolder(data.Dataset):
     """
     def __init__(self, data_root, dataset, subset, transform):
         super(DatasetFromFolder, self).__init__()
-        self.transform = transform
+        self.transform = transform 
         self.image_dir, self.image_name, self.keypoints = load_dataset(data_root, dataset, subset)
         # len = image_name.shape[0] // 5 #use 20% of data
         # self.image_name = image_name[:len]
