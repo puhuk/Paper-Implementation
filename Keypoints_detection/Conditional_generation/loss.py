@@ -67,3 +67,5 @@ class Perceptual_loss(nn.Module):
             # print(loss, vgg_losses)
 
             return loss, vgg_losses
+
+    

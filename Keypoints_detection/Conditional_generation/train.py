@@ -92,29 +92,30 @@ class train:
         self.pi_encoder =  PoseEncoder(in_channels=3, n_filters=32, n_maps=10, map_sizes=self.map_sizes)
         self.renderer = Decoder(self.min_size, self.map_filters, self.n_render_filters, self.n_final_out, n_final_res=self.max_size[0])
         
+        self.loss = Perceptual_loss()
 
         
+    def train():
 
+        start_epoch = 1
+        best_result = 1
+        best_flag = False
 
-    start_epoch = 1
-    best_result = 1
-    best_flag = False
+        if self.opt.resume_checkpoint:
+            print('Resuming checkpoint at {}'.format(self.opt.resume_checkpoint))
+            checkpoint = torch.load(
+                self.opt.resume_checkpoint,
+                map_location=lambda storage, loc: storage, pickle_module=pickle)
 
-    if self.opt.resume_checkpoint:
-        print('Resuming checkpoint at {}'.format(self.opt.resume_checkpoint))
-        checkpoint = torch.load(
-            self.opt.resume_checkpoint,
-            map_location=lambda storage, loc: storage, pickle_module=pickle)
+            model_state = checkpoint['modelstate']
+            self.neuralnet.load_state_dict(model_state)
 
-        model_state = checkpoint['modelstate']
-        self.neuralnet.load_state_dict(model_state)
+            optim_state = checkpoint['optimstate']
+            self.optimizer = _make_optimizer(
+                self.opt, self.neuralnet, param_groups=optim_state['param_groups'])
 
-        optim_state = checkpoint['optimstate']
-        self.optimizer = _make_optimizer(
-            self.opt, self.neuralnet, param_groups=optim_state['param_groups'])
-
-        start_epoch = checkpoint['epoch']+1
-        best_result = checkpoint['best_result']
+            start_epoch = checkpoint['epoch']+1
+            best_result = checkpoint['best_result']
 
 
 if __name__ == "__main__":
